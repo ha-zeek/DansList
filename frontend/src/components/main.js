@@ -83,13 +83,13 @@ export default function Main() {
           x._id === product._id ? { ...exist, qty: exist.qty - 1 } : x
         )
       );
-      const response = await fetch(URL + "/cart/" + exist._id, {
-        method: "put",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(exist),
-      });
+      // const response = await fetch(URL + "/cart/" + exist._id, {
+      //   method: "put",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(exist),
+      // });
     }
   };
 

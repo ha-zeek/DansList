@@ -1,6 +1,4 @@
 import React from "react";
-import { useState } from "react";
-// import products from "../productsAPI";
 import { Link } from "react-router-dom";
 
 export default function ProductList({ products, onAdd }) {

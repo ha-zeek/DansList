@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
 
 export default function ProductPage({ products, onAdd }) {
   const { id } = useParams();
-  const productObj = products.find((item) => item._id == id);
+  const productObj = products.find((item) => item._id === id);
   console.log(products);
   return (
     <div className="productEntry">
       {products.map((product) => {
-        if (product._id == id) {
+        if (product._id === id) {
           return (
             <div key={product._id}>
               <h1 className="productName fw-bolder">
@@ -41,8 +40,7 @@ export default function ProductPage({ products, onAdd }) {
       <button
         onClick={() => onAdd(productObj)}
         type="button"
-        className="btn btn-success"
-      >
+        className="btn btn-success">
         Add to Cart
       </button>
     </div>
